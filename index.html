@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Fabrik — Professionelles Webdesign Zürich</title>
+  <meta name="description" content="Content Fabrik erstellt professionelle, moderne Websites für KMUs und Einzelfirmen in Zürich. Fair bepreist, individuell gestaltet.">
+  <meta property="og:title" content="Content Fabrik — Webdesign Zürich">
+  <meta property="og:description" content="Professionelle Websites für KMUs und Einzelfirmen in der Region Zürich. Modern, wirkungsvoll und zu einem fairen Preis.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0A0A08">
+
+  <!-- Google Fonts: Fraunces + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Noise Texture Filter -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <filter id="noise">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+        <feColorMatrix type="saturate" values="0"/>
+        <feBlend in="SourceGraphic" mode="multiply" result="blend"/>
+        <feComposite in="blend" in2="SourceGraphic"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ============================================================ -->
+  <!-- NAVIGATION -->
+  <!-- ============================================================ -->
+  <header class="nav-wrapper" role="banner">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#" class="nav-logo" aria-label="Content Fabrik Startseite">
+        <span class="logo-text">Content Fabrik</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#leistungen" class="nav-link">Leistungen</a></li>
+        <li><a href="#referenzen" class="nav-link">Referenzen</a></li>
+        <li><a href="#preise" class="nav-link">Preise</a></li>
+        <li><a href="#ueber-uns" class="nav-link">Über uns</a></li>
+        <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+      </ul>
+
+      <a href="#kontakt" class="btn btn-accent nav-cta">Projekt starten →</a>
+
+      <button class="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobilnavigation">
+    <button class="mobile-menu-close" aria-label="Menü schliessen">
+      <i data-lucide="x" aria-hidden="true"></i>
+    </button>
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="#leistungen" class="mobile-nav-link">Leistungen</a></li>
+      <li><a href="#referenzen" class="mobile-nav-link">Referenzen</a></li>
+      <li><a href="#preise" class="mobile-nav-link">Preise</a></li>
+      <li><a href="#ueber-uns" class="mobile-nav-link">Über uns</a></li>
+      <li><a href="#kontakt" class="mobile-nav-link">Kontakt</a></li>
+    </ul>
+    <a href="#kontakt" class="btn btn-accent mobile-cta">Projekt starten →</a>
+  </div>
+
+  <main>
+
+    <!-- ============================================================ -->
+    <!-- 01 HERO -->
+    <!-- ============================================================ -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg-char" aria-hidden="true">W</div>
+
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="hero-eyebrow animate-load" style="animation-delay:0.1s">Webdesign Agentur · Zürich</span>
+
+          <h1 class="hero-headline animate-load" style="animation-delay:0.3s">
+            Websites,<br>
+            die&nbsp;<span class="hero-highlight">
+              verkaufen.
+              <svg class="hero-underline" viewBox="0 0 320 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none">
+                <path d="M4 12 C60 6, 130 16, 200 10 C250 6, 290 14, 316 9" stroke="#D4FF00" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+              </svg>
+            </span>
+          </h1>
+
+          <p class="hero-sub animate-load" style="animation-delay:0.5s">
+            Professionelles Webdesign für KMUs und Einzelunternehmen<br class="br-desktop">
+            in Zürich — modern, wirkungsvoll und zu einem fairen Preis.
+          </p>
+
+          <div class="hero-ctas animate-load" style="animation-delay:0.7s">
+            <a href="#kontakt" class="btn btn-accent btn-lg">Kostenlos beraten lassen →</a>
+            <a href="#referenzen" class="btn btn-ghost btn-lg">Referenzen ansehen</a>
+          </div>
+        </div>
+
+        <div class="hero-stats animate-load" style="animation-delay:0.9s" aria-label="Kennzahlen">
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Projekte</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Jahre Erfahrung</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Schweizer Qualität</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number">ZH</span>
+            <span class="stat-label">Zürich basiert</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 02 LEISTUNGEN -->
+    <!-- ============================================================ -->
+    <section class="section" id="leistungen" aria-labelledby="leistungen-heading">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="section-num" aria-hidden="true">02</span>
+          <h2 id="leistungen-heading" class="section-headline">Was wir<br>machen.</h2>
+          <p class="section-intro">Von der ersten Idee bis zur fertigen Website — wir begleiten Sie auf dem gesamten Weg.</p>
+        </div>
+
+        <div class="cards-grid cards-2x2">
+
+          <article class="card reveal" data-reveal="up">
+            <div class="card-num" aria-hidden="true">01</div>
+            <div class="card-icon" aria-hidden="true">
+              <i data-lucide="monitor"></i>
+            </div>
+            <h3 class="card-title">Webseiten-Erstellung</h3>
+            <p class="card-text">Von der ersten Idee bis zum Go-live: Wir gestalten und entwickeln Ihre neue Website — mobil optimiert, schnell und modern.</p>
+          </article>
+
+          <article class="card reveal" data-reveal="up">
+            <div class="card-num" aria-hidden="true">02</div>
+            <div class="card-icon" aria-hidden="true">
+              <i data-lucide="refresh-cw"></i>
+            </div>
+            <h3 class="card-title">Redesign & Relaunch</h3>
+            <p class="card-text">Ihre bestehende Website wirkt veraltet? Wir modernisieren sie — ohne dass Sie Ihren Betrieb unterbrechen müssen.</p>
+          </article>
+
+          <article class="card reveal" data-reveal="up">
+            <div class="card-num" aria-hidden="true">03</div>
+            <div class="card-icon" aria-hidden="true">
+              <i data-lucide="wrench"></i>
+            </div>
+            <h3 class="card-title">Pflege & Wartung</h3>
+            <p class="card-text">Wir halten Ihre Website aktuell: Inhalte ändern, Software-Updates, Backups und technischer Support inklusive.</p>
+          </article>
+
+          <article class="card reveal" data-reveal="up">
+            <div class="card-num" aria-hidden="true">04</div>
+            <div class="card-icon" aria-hidden="true">
+              <i data-lucide="search"></i>
+            </div>
+            <h3 class="card-title">SEO-Grundlagen</h3>
+            <p class="card-text">Eine schöne Website nützt nichts, wenn niemand sie findet. Wir legen das Fundament für Ihre Sichtbarkeit bei Google.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 03 VORTEILE -->
+    <!-- ============================================================ -->
+    <section class="section section-alt" id="vorteile" aria-labelledby="vorteile-heading">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="section-num" aria-hidden="true">03</span>
+          <h2 id="vorteile-heading" class="section-headline">Warum<br>Content Fabrik?</h2>
+        </div>
+
+        <div class="pillars-grid">
+
+          <div class="pillar reveal" data-reveal="up">
+            <div class="pillar-top-border"></div>
+            <div class="pillar-icon" aria-hidden="true">
+              <i data-lucide="award"></i>
+            </div>
+            <h3 class="pillar-title">Professionell</h3>
+            <p class="pillar-text">Kein Template-Baukasten. Jede Website wird individuell konzipiert und umgesetzt — auf Ihre Ziele zugeschnitten.</p>
+          </div>
+
+          <div class="pillar reveal" data-reveal="up">
+            <div class="pillar-top-border"></div>
+            <div class="pillar-icon" aria-hidden="true">
+              <i data-lucide="zap"></i>
+            </div>
+            <h3 class="pillar-title">Modern</h3>
+            <p class="pillar-text">Zeitgemässes Design, das zu Ihrem Unternehmen passt — und einen bleibenden Eindruck bei Ihren Besuchern hinterlässt.</p>
+          </div>
+
+          <div class="pillar reveal" data-reveal="up">
+            <div class="pillar-top-border"></div>
+            <div class="pillar-icon" aria-hidden="true">
+              <i data-lucide="tag"></i>
+            </div>
+            <h3 class="pillar-title">Erschwinglich</h3>
+            <p class="pillar-text">Faire Preise ohne versteckte Kosten. Klare Pakete, klare Leistungen — Qualität muss kein Vermögen kosten.</p>
+          </div>
+
+          <div class="pillar reveal" data-reveal="up">
+            <div class="pillar-top-border"></div>
+            <div class="pillar-icon" aria-hidden="true">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <h3 class="pillar-title">Lokal</h3>
+            <p class="pillar-text">Wir sind in Zürich zuhause und kennen den Schweizer Markt — persönlicher Kontakt und kurze Wege inklusive.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 04 REFERENZEN -->
+    <!-- ============================================================ -->
+    <section class="section" id="referenzen" aria-labelledby="referenzen-heading">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="section-num" aria-hidden="true">04</span>
+          <h2 id="referenzen-heading" class="section-headline">Unsere<br>Arbeit.</h2>
+          <p class="section-intro">Ausgewählte Projekte — von der Idee bis zur fertigen Website.</p>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-card reveal" data-reveal="up">
+            <div class="portfolio-img" style="--grad-a:#2a1a0e;--grad-b:#4a2c1a" aria-hidden="true">
+              <div class="portfolio-img-label">Metzgerei Huber</div>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-industry">Gastronomie &amp; Lebensmittel</span>
+              <h3 class="portfolio-title">Metzgerei Huber</h3>
+              <div class="portfolio-tags">
+                <span class="tag">Webseite</span>
+                <span class="tag">Fotografie</span>
+                <span class="tag">SEO</span>
+              </div>
+            </div>
+            <div class="portfolio-overlay" aria-hidden="true">
+              <span class="portfolio-arrow">→</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" data-reveal="up">
+            <div class="portfolio-img" style="--grad-a:#0e1a2a;--grad-b:#1a3a4a" aria-hidden="true">
+              <div class="portfolio-img-label">Praxis Dr. Keller</div>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-industry">Gesundheit &amp; Medizin</span>
+              <h3 class="portfolio-title">Praxis Dr. Keller</h3>
+              <div class="portfolio-tags">
+                <span class="tag">Redesign</span>
+                <span class="tag">Terminbuchung</span>
+              </div>
+            </div>
+            <div class="portfolio-overlay" aria-hidden="true">
+              <span class="portfolio-arrow">→</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" data-reveal="up">
+            <div class="portfolio-img" style="--grad-a:#1a1a0e;--grad-b:#2e2e1a" aria-hidden="true">
+              <div class="portfolio-img-label">Bau & Reno GmbH</div>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-industry">Handwerk &amp; Bau</span>
+              <h3 class="portfolio-title">Bau &amp; Reno GmbH</h3>
+              <div class="portfolio-tags">
+                <span class="tag">Webseite</span>
+                <span class="tag">Google Maps</span>
+                <span class="tag">Referenzseite</span>
+              </div>
+            </div>
+            <div class="portfolio-overlay" aria-hidden="true">
+              <span class="portfolio-arrow">→</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card portfolio-cta reveal" data-reveal="up">
+            <div class="portfolio-cta-inner">
+              <span class="portfolio-cta-label">Ihr Projekt</span>
+              <p class="portfolio-cta-text">Lassen Sie uns zusammenarbeiten.</p>
+              <a href="#kontakt" class="btn btn-accent">Kontakt aufnehmen →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 05 PREISE -->
+    <!-- ============================================================ -->
+    <section class="section section-alt" id="preise" aria-labelledby="preise-heading">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="section-num" aria-hidden="true">05</span>
+          <h2 id="preise-heading" class="section-headline">Faire<br>Preise.</h2>
+          <p class="section-intro">Klare Pakete, keine Überraschungen. Alle Preise in CHF, inkl. MwSt.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <div class="pricing-card reveal" data-reveal="up">
+            <div class="pricing-header">
+              <span class="pricing-tier">Starter</span>
+              <div class="pricing-price">
+                <span class="price-currency">CHF</span>
+                <span class="price-amount">1'490</span>
+              </div>
+              <p class="pricing-desc">Ideal für Einzelunternehmer und kleine Betriebe, die online sichtbar werden möchten.</p>
+            </div>
+            <ul class="pricing-features" aria-label="Leistungen im Starter-Paket">
+              <li><i data-lucide="check" aria-hidden="true"></i> Bis zu 5 Seiten</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Mobil optimiert</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Kontaktformular</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Google Maps Integration</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> 1 Monat kostenloser Support</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-outline pricing-btn">Jetzt anfragen</a>
+          </div>
+
+          <div class="pricing-card pricing-featured reveal" data-reveal="up">
+            <div class="pricing-badge" aria-label="Empfohlenes Paket">Empfohlen</div>
+            <div class="pricing-header">
+              <span class="pricing-tier">Business</span>
+              <div class="pricing-price">
+                <span class="price-currency">CHF</span>
+                <span class="price-amount">2'890</span>
+              </div>
+              <p class="pricing-desc">Für KMUs, die eine vollständige Online-Präsenz mit individuellem Design benötigen.</p>
+            </div>
+            <ul class="pricing-features" aria-label="Leistungen im Business-Paket">
+              <li><i data-lucide="check" aria-hidden="true"></i> Bis zu 10 Seiten</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Individuelles Design</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> SEO-Grundoptimierung</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Blog / News-Bereich</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Performance-Optimierung</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> 3 Monate kostenloser Support</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-accent pricing-btn">Jetzt anfragen</a>
+          </div>
+
+          <div class="pricing-card reveal" data-reveal="up">
+            <div class="pricing-header">
+              <span class="pricing-tier">Premium</span>
+              <div class="pricing-price">
+                <span class="price-currency">CHF</span>
+                <span class="price-amount">4'490<span class="price-plus">+</span></span>
+              </div>
+              <p class="pricing-desc">Für Unternehmen, die eine massgeschneiderte Lösung mit vollem Funktionsumfang wünschen.</p>
+            </div>
+            <ul class="pricing-features" aria-label="Leistungen im Premium-Paket">
+              <li><i data-lucide="check" aria-hidden="true"></i> Unbegrenzte Seiten</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Premium-Design &amp; Animation</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Vollständige SEO-Optimierung</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> CMS-Integration (selbst bearbeitbar)</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Analytics &amp; Tracking-Setup</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> 6 Monate Support &amp; Wartung</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-outline pricing-btn">Jetzt anfragen</a>
+          </div>
+
+        </div>
+
+        <p class="pricing-note reveal" data-reveal="fade">
+          Sie haben spezielle Anforderungen? Kein Problem — wir erstellen Ihnen ein massgeschneidertes Angebot.
+          <a href="#kontakt" class="pricing-note-link">Kontakt aufnehmen →</a>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 06 ÜBER UNS -->
+    <!-- ============================================================ -->
+    <section class="section" id="ueber-uns" aria-labelledby="ueber-uns-heading">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-monogram" aria-hidden="true">
+            <span class="monogram-text">CF</span>
+          </div>
+
+          <div class="about-content">
+            <div class="section-header reveal" data-reveal="up">
+              <span class="section-num" aria-hidden="true">06</span>
+              <h2 id="ueber-uns-heading" class="section-headline">Wer<br>wir sind.</h2>
+            </div>
+
+            <div class="about-body reveal" data-reveal="up">
+              <p>Content Fabrik ist eine Webdesign-Agentur aus Zürich. Wir haben uns darauf spezialisiert, kleinen und mittelständischen Unternehmen zu einem professionellen Online-Auftritt zu verhelfen — ohne das Budget eines Grosskonzerns.</p>
+
+              <p>Unser Ansatz ist einfach: Zuerst zuhören, dann gestalten. Jede Website, die wir bauen, ist auf die spezifischen Ziele und die Zielgruppe unseres Kunden ausgerichtet.</p>
+
+              <p>Wir glauben daran, dass gutes Design kein Luxus ist — es ist eine Investition, die sich auszahlt.</p>
+
+              <div class="about-meta">
+                <span class="about-meta-item">
+                  <i data-lucide="calendar" aria-hidden="true"></i>
+                  Gegründet 2019
+                </span>
+                <span class="about-meta-divider" aria-hidden="true">·</span>
+                <span class="about-meta-item">
+                  <i data-lucide="map-pin" aria-hidden="true"></i>
+                  Zürich, Schweiz
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 07 KONTAKT -->
+    <!-- ============================================================ -->
+    <section class="section section-alt" id="kontakt" aria-labelledby="kontakt-heading">
+      <div class="container">
+        <div class="section-header reveal" data-reveal="up">
+          <span class="section-num" aria-hidden="true">07</span>
+          <h2 id="kontakt-heading" class="section-headline">Lassen Sie<br>uns reden.</h2>
+          <p class="section-intro">Erzählen Sie uns von Ihrem Projekt. Wir melden uns innerhalb von 24 Stunden.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-form-wrap reveal" data-reveal="up">
+            <form class="contact-form" id="contact-form" novalidate aria-label="Kontaktformular">
+
+              <div class="form-field">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Max Muster" autocomplete="name" required>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="email" class="form-label">E-Mail</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="max@beispiel.ch" autocomplete="email" required>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="phone" class="form-label">Telefon <span class="form-optional">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+41 44 000 00 00" autocomplete="tel">
+              </div>
+
+              <div class="form-field">
+                <label for="message" class="form-label">Ihre Nachricht</label>
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Erzählen Sie uns von Ihrem Projekt..." rows="5" required></textarea>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field form-field-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="privacy" name="privacy" class="form-checkbox" required>
+                  <span class="checkbox-custom" aria-hidden="true"></span>
+                  Ich habe die <a href="#" class="form-link">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
+                </label>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-accent btn-lg form-submit">
+                Nachricht senden →
+              </button>
+
+            </form>
+
+            <div class="form-success" id="form-success" aria-live="polite" hidden>
+              <div class="success-icon" aria-hidden="true">
+                <i data-lucide="check-circle"></i>
+              </div>
+              <h3 class="success-title">Nachricht gesendet!</h3>
+              <p class="success-text">Vielen Dank für Ihre Nachricht. Wir melden uns so schnell wie möglich bei Ihnen.</p>
+            </div>
+          </div>
+
+          <aside class="contact-details reveal" data-reveal="up">
+            <div class="contact-info">
+              <h3 class="contact-info-title">Content Fabrik</h3>
+
+              <ul class="contact-list" aria-label="Kontaktinformationen">
+                <li class="contact-item">
+                  <i data-lucide="map-pin" aria-hidden="true"></i>
+                  <span>Zürich, Schweiz</span>
+                </li>
+                <li class="contact-item">
+                  <i data-lucide="mail" aria-hidden="true"></i>
+                  <a href="mailto:hallo@contentfabrik.ch" class="contact-link">hallo@contentfabrik.ch</a>
+                </li>
+                <li class="contact-item">
+                  <i data-lucide="phone" aria-hidden="true"></i>
+                  <a href="tel:+41440000000" class="contact-link">+41 44 000 00 00</a>
+                </li>
+                <li class="contact-item">
+                  <i data-lucide="clock" aria-hidden="true"></i>
+                  <span>Mo – Fr, 09:00 – 18:00 Uhr</span>
+                </li>
+              </ul>
+
+              <div class="contact-social" aria-label="Social Media">
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <i data-lucide="linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <i data-lucide="instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#" class="footer-logo" aria-label="Content Fabrik Startseite">Content Fabrik</a>
+          <p class="footer-tagline">Professionelles Webdesign für Zürich und die Schweiz.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer-Navigation">
+          <h4 class="footer-nav-title">Navigation</h4>
+          <ul role="list">
+            <li><a href="#leistungen" class="footer-link">Leistungen</a></li>
+            <li><a href="#referenzen" class="footer-link">Referenzen</a></li>
+            <li><a href="#preise" class="footer-link">Preise</a></li>
+            <li><a href="#ueber-uns" class="footer-link">Über uns</a></li>
+            <li><a href="#kontakt" class="footer-link">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-legal" aria-label="Rechtliche Links">
+          <h4 class="footer-nav-title">Rechtliches</h4>
+          <ul role="list">
+            <li><a href="#" class="footer-link">Impressum</a></li>
+            <li><a href="#" class="footer-link">Datenschutz</a></li>
+            <li><a href="#" class="footer-link">AGB</a></li>
+          </ul>
+          <div class="footer-social" aria-label="Social Media">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i data-lucide="linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i data-lucide="instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Content Fabrik · Alle Rechte vorbehalten · Zürich, Schweiz</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
